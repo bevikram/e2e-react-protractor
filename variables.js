@@ -1,6 +1,6 @@
 'use strict';
 
-var variable = {
+let variable = {
   "hostname":"https://nsn-local.sensity.com",
   "username":"sensity_user@sensity.com",
   "password":"admin123",

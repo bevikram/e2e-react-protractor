@@ -5,7 +5,7 @@ exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
   baseUrl: 'https://nsn-local.sensity.com/',
   capabilities: {
-      browserName:'chrome'
+    browserName: 'chrome'
   },
   // multiCapabilities: [{
   //   'browserName': 'firefox'
@@ -13,7 +13,10 @@ exports.config = {
   //   'browserName': 'chrome'
   // }],
   frameworks: ['mocha', 'chai'],
-  specs: ['./specs/login.js'],
+  suites: {
+    login: ['./specs/login.js'],
+    logout: ['./specs/logout.js']
+  },
   onPrepare: () => {
     browser.ignoreSynchronization = true;
     var width = 1425;
