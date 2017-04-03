@@ -1,21 +1,23 @@
 'use strict';
+const input = require('./variables');
 
 // React Web testing
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  baseUrl: 'https://nsn-local.sensity.com/',
+  baseUrl: input.baseUrl,
   capabilities: {
     browserName: 'chrome'
   },
+   maxInstances: 50,
   // multiCapabilities: [{
   //   'browserName': 'firefox'
   // }, {
   //   'browserName': 'chrome'
   // }],
-  frameworks: ['mocha', 'chai'],
   suites: {
     login: ['./specs/login.js'],
-    logout: ['./specs/logout.js']
+    create_customer: ['./specs/createCustomer.js']
+    // logout: ['./specs/logout.js']
   },
   onPrepare: () => {
     browser.ignoreSynchronization = true;
@@ -24,7 +26,8 @@ exports.config = {
     browser.driver.manage().window().setSize(width, height);
     require('babel-register');
   },
-  allScriptsTimeout: 15000,
+  getPageTimeout: 50000,
+  allScriptsTimeout: 50000,
   mochaOpts: {
     enableTimeouts: false,
   }

@@ -8,12 +8,17 @@ End-to-End testing for react framework with protractor
 npm install
 ```
 
+### Update selenium webdriver:
+```bash
+npm run update:driver
+```
+
 ### Start selenium webdriver:
 ```bash
-npm run e2e-driver
+npm run start:driver
 ```
 
 ### Running the specs:
 ```bash
-npm run e2e
+npm start
 ```
