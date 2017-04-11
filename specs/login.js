@@ -14,6 +14,6 @@ describe('login screen', () => {
         element(by.id('password')).sendKeys(input.password);
         // browser.sleep(1000);
         element(by.xpath("//button[@type='submit']")).click();
-        browser.sleep(1000);
+        browser.sleep(3000);
     });
 });

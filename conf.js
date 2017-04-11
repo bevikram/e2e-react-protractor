@@ -8,16 +8,16 @@ exports.config = {
   capabilities: {
     browserName: 'chrome'
   },
-   maxInstances: 50,
+  maxInstances: 50,
   // multiCapabilities: [{
   //   'browserName': 'firefox'
   // }, {
-  //   'browserName': 'chrome'
+  //   'browserName': 'phantomjs'
   // }],
   suites: {
     login: ['./specs/login.js'],
-    create_customer: ['./specs/createCustomer.js']
-    // logout: ['./specs/logout.js']
+    create_customer: ['./specs/createCustomer.js'],
+    logout: ['./specs/logout.js']
   },
   onPrepare: () => {
     browser.ignoreSynchronization = true;

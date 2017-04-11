@@ -1,12 +1,16 @@
 'use strict';
 // import { config } from 'config';
 // console.log(config);
+const randNum = ()=>{
+  return Math.floor((Math.random() * 1000) + 1);
+};
+
 let variable = {
   "baseUrl": "http://localhost:8090",
   "username": "sensity_user@sensity.com",
   "password": "admin123",
   "customer": {
-    "name": "600 Verizon",
+    "name":  randNum() + " Verizon",
     "street1": "700 Hidden Ridge",
     "street2": "Block W",
     "city": "Irving",
