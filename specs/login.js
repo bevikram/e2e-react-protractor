@@ -14,6 +14,28 @@ describe('login screen', () => {
         element(by.id('password')).sendKeys(input.password);
         // browser.sleep(1000);
         element(by.xpath("//button[@type='submit']")).click();
-        browser.sleep(3000);
+        browser.sleep(1000);
     });
+
+    it('Reporter Fail Test1', () => {
+        // Intentaionlly failing a Test to check error Reporting.
+        expect(true).toEqual(false)
+
+    });
+    it('Reporter Pass Test1', () => {
+        // Intentaionlly failing a Test to check error Reporting.
+        expect(true).toEqual(true)
+
+    });
+    it('Reporter Pass Test1', () => {
+        // Intentaionlly failing a Test to check error Reporting.
+        expect(true).toEqual(true)
+
+    });
+    it('Reporter Fail Test2', () => {
+        // Intentaionlly failing a Test to check error Reporting.
+        expect(true).toEqual(false)
+
+    });
+
 });
