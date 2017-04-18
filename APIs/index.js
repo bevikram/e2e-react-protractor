@@ -1,5 +1,5 @@
 'use strict';
-import * as input  from '../variables';
+import {loginInfo} from '../variables';
 import * as API from './login';
 
 describe('login with API', function () {

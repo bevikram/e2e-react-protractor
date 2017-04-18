@@ -1,20 +1,20 @@
 var https = require('https');
 // var protractor = require('protractor');
-var input = require('../variables');
+import {loginInfo} from '../variables';
 
 var api = function () {
   this.login = function () {
     var defferred = protractor.promise.defer();
     var config = {
-      hostname: input.hostname,
+      hostname: loginInfo.hostname,
       path: '/login',
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
       },
       body: {
-        "email": input.username,
-        "password": input.password
+        "email": loginInfo.username,
+        "password": loginInfo.password
       }
     };
 

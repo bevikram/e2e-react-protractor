@@ -1,9 +1,8 @@
 'use strict';
 
-import input from '../variables';
+import { customerInfo } from '../variables';
 import FillForm from '../pom/FillForm';
-// import { should, expect, chai } from 'chai';
-// var until = protractor.ExpectedConditions;
+
 
 describe('Create Customer', () => {
 
@@ -12,10 +11,10 @@ describe('Create Customer', () => {
   var popUp = $('.noty_text');
   // beforeEach(() => { browser.get("https://nsn-local.sensity.com/app/customerpanel"); });
   it('Should get customer page', () => {
-    //browser.get(input.baseUrl + "/app/customerpanel");
+    //browser.get(loginInfo.baseUrl + "/app/customerpanel");
     browser.sleep(3000);
     element(by.id('addCustomer')).click();
-    FillForm.fill(input.customer)
+    FillForm.fill(customerInfo)
     element(by.id('addCustomer')).isDisplayed()
   });
 
@@ -38,10 +37,10 @@ describe('Create Customer', () => {
 
   it('should search grid for added customer', () => {
     searchByName.isPresent().then(() => {
-      searchByName.sendKeys(input.customer.name);
+      searchByName.sendKeys(customerInfo.name);
     });
     browser.sleep(3000);
-    expect(selectedFirstRow.getText()).toEqual(input.customer.name);
+    expect(selectedFirstRow.getText()).toEqual(customerInfo.name);
     browser.sleep(3000);
   });
 
