@@ -1,7 +1,7 @@
 'use strict';
 
 import { customerInfo } from '../variables';
-import FillForm from '../pom/FillForm';
+import customerForm from '../pom/customerForm';
 
 
 describe('Create Customer', () => {
@@ -14,7 +14,9 @@ describe('Create Customer', () => {
     //browser.get(loginInfo.baseUrl + "/app/customerpanel");
     browser.sleep(3000);
     element(by.id('addCustomer')).click();
-    FillForm.fill(customerInfo)
+
+    customerForm.fill(customerInfo)
+    
     element(by.id('addCustomer')).isDisplayed()
   });
 

@@ -1,5 +1,6 @@
 'use strict';
 import { loginInfo } from '../variables';
+import log from '../pom/log'
 var loginUrl;
 
 describe('login screen', () => {
@@ -9,9 +10,7 @@ describe('login screen', () => {
         loginUrl = browser.getCurrentUrl();
         // browser.get(input.baseUrl);
         browser.sleep(1000);
-        element(by.id('emailaddress')).sendKeys(loginInfo.username);
-        // browser.sleep(1000);
-        element(by.id('password')).sendKeys(loginInfo.password);
+        log.in(loginInfo)
         // browser.sleep(1000);
         element(by.xpath("//button[@type='submit']")).click();
         browser.sleep(3000);
