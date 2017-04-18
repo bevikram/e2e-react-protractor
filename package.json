@@ -4,7 +4,8 @@
   "description": "",
   "main": "config.js",
   "scripts": {
-    "start": "protractor --resultJsonOutputFile='./output.json' ./conf.js ",
+    "start": "npm run update:driver && npm run start:driver",
+    "test": "protractor --resultJsonOutputFile='./output.json' ./conf.js ",
     "start:driver": "webdriver-manager start",
     "update:driver": "webdriver-manager update"
   },

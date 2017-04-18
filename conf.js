@@ -3,6 +3,7 @@ const input = require('./variables');
 
 // React Web testing
 exports.config = {
+  directConnect: true,
   seleniumAddress: 'http://localhost:4444/wd/hub',
   baseUrl: input.baseUrl,
   capabilities: {
